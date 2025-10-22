@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Portfolio</title>
+    <!-- Link your CSS file here -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ==========================
+       1. NAVBAR
+  =========================== -->
+    <nav>
+      <div class="container">
+        <ul>
+          <li><a class="active" href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ==========================
+       2. HOME SECTION (Hero)
+  =========================== -->
+    <header id="home" class="home-hero">
+      <div class="container">
+        <h1>Parth Shrivastava</h1>
+        <p>BCA Student &amp; Formal Web Developer</p>
+        <p>Developing Skills in Full-Stack Web Development</p>
+        <div class="btn-group">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn" href="#contact">Contact Me</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ==========================
+       3. ABOUT SECTION
+  =========================== -->
+    <section id="about" class="about-section">
+      <div class="about-content">
+        <figure class="about-photo" aria-label="Profile Photo">
+          <img src="Parth.jpg" alt="Portrait of Vishwas" />
+        </figure>
+
+        <div class="about-text">
+          <h2>About Me</h2>
+          <p>
+            Hello! I’m Parth Shrivastava, a keen and inquisitive tech enthusiast who is currently doing my Bachelor’s in Computer Applications (BCA). I’m passionate about learning about the realm of programming, web development, and tech and about designing useful and user-friendly solutions.
+          </p>
+          <p>
+            <i>Where creativity meets clean code.</i>
+          </p>
+
+          <ul class="education-list">
+            <li>BCA (Year 2) — 1 year left to graduate</li>
+            <li>Focus: Web Development, Full Stack Development</li>
+            <li>Open to internships</li>
+          </ul>
+
+          <div class="social-icons" aria-label="Social Links">
+            <a
+              href="https://github.com/Vishwas567917"
+              aria-label="GitHub"
+              title="GitHub"
+              target="_blank"
+              >🐱‍💻</a
+            >
+            <a
+              href="https://www.linkedin.com/in/parth-shrivastava-74b8a1311"
+              aria-label="LinkedIn"
+              title="LinkedIn"
+              target="_blank"
+              >🔗</a
+            >
+            <a
+              href="mailto:parthshrivastava@gmail.com"
+              aria-label="Email"
+              title="Email"
+              >📧</a
+            >
+            <a
+              href="https://www.instagram.com/"
+              aria-label="Instagram"
+              title="Instagram"
+              target="_blank"
+              >📸</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================
+       4. PROJECTS SECTION
+  =========================== -->
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <h2 style="text-align: center; margin-bottom: 2rem">Projects</h2>
+
+        <div class="projects-grid">
+          <!-- Card 1 -->
+          <article class="project-card">
+            <img
+              src="video-chat.png"
+              alt="Screenshot of Video Chat App"
+            />
+            <h3>Video-chat-v1</h3>
+            <p>
+              Video-chat-v1 is a video chat app that makes it easy to groups up
+              with people you want to meet. It uses WebRTC for real-time
+              communication and supports multiple users in a single room.
+            </p>
+            <div class="project-buttons">
+              <a href="#" target="_blank" rel="noopener">Live Demo</a>
+              <a
+                href="https://github.com/Vishwas567917/video-chat-app"
+                target="_blank"
+                rel="noopener"
+                >GitHub</a
+              >
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="project-card">
+            <img
+              src="Text-emoji.png"
+              alt="Text to image"
+            />
+            <h3>Text to Emojis Converter</h3>
+            <p>
+              This project is a web application that allows users to encrypt and
+              decrypt messages using emojis. Users can type a message, set a
+              password, and convert the message into emojis. Similarly, they can
+              decrypt an emoji message back into text using the same password.
+            </p>
+            <div class="project-buttons">
+              <a href="#" target="_blank" rel="noopener">Live Demo</a>
+              <a
+                href="https://github.com/Vishwas567917/text-emoji?tab=readme-ov-file"
+                target="_blank"
+                rel="noopener"
+                >GitHub</a
+              >
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="project-card">
+            <img
+              src="Nodejs.png"
+              alt="Node.js"
+            />
+            <h3>Node.js Passport Authentication App</h3>
+            <p>
+              This is a Node.js web application that implements user
+              authentication using Passport.js and MongoDB. It allows users to
+              register, login, and access a protected dashboard page upon
+              successful authentication.
+            </p>
+            <div class="project-buttons">
+              <a href="#" target="_blank" rel="noopener">Live Demo</a>
+              <a
+                href="https://github.com/Vishwas567917/Node.js-Passport"
+                target="_blank"
+                rel="noopener"
+                >GitHub</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================
+     5. SKILLS SECTION
+=========================== -->
+    <section id="skills" class="skills-section">
+      <div class="container">
+        <h2 style="margin-bottom: 2rem">Skills</h2>
+
+        <div class="skills-container">
+          <!-- Skill 1 -->
+          <div class="skill">
+            <div class="skill-icon" aria-hidden="true">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                alt="HTML Logo"
+              />
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                alt="CSS Logo"
+              />
+            </div>
+            <h4>HTML &amp; CSS</h4>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" style="--skill-level: 90%"></div>
+            </div>
+          </div>
+
+          <!-- Skill 2 -->
+          <div class="skill">
+            <div class="skill-icon" aria-hidden="true">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="JavaScript Logo"
+              />
+            </div>
+            <h4>JavaScript</h4>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" style="--skill-level: 80%"></div>
+            </div>
+          </div>
+
+          <!-- Skill 3 -->
+          <div class="skill">
+            <div class="skill-icon" aria-hidden="true">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                alt="Python Logo"
+              />
+            </div>
+            <h4>Python</h4>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" style="--skill-level: 75%"></div>
+            </div>
+          </div>
+
+          <!-- Skill 4 -->
+          <div class="skill">
+            <div class="skill-icon" aria-hidden="true">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                alt="Database Logo"
+              />
+            </div>
+            <h4>Databases</h4>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" style="--skill-level: 70%"></div>
+            </div>
+          </div>
+          <!-- Skill 5 -->
+          <div class="skill">
+            <div class="skill-icon" aria-hidden="true">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                alt="MongoDB Logo"
+              />
+            </div>
+            <h4>MongoDB</h4>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" style="--skill-level: 65%"></div>
+            </div>
+          </div>
+          <!-- Skill 6 -->
+          <div class="skill">
+            <div class="skill-icon" aria-hidden="true">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                alt="React Logo"
+              />
+            </div>
+            <h4>React JS</h4>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" style="--skill-level: 60%"></div>
+            </div>
+          </div>
+          <!-- Skill 7 -->
+          <div class="skill">
+            <div class="skill-icon" aria-hidden="true">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                alt="Node.js Logo"
+              />
+            </div>
+            <h4>Node.js</h4>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" style="--skill-level: 70%"></div>
+            </div>
+          </div>
+          <!-- Skill 8 -->
+          <div class="skill">
+            <div class="skill-icon" aria-hidden="true">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                alt="GitHub Logo"
+              />
+            </div>
+            <h4>Git &amp; GitHub</h4>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill" style="--skill-level: 65%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ==========================
+       6. CONTACT SECTION
+  =========================== -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h2 style="margin-bottom: 2rem">Contact Me</h2>
+
+        <div class="contact-form-wrapper">
+          <form novalidate>
+            <!-- Name -->
+            <div class="form-group">
+              <input
+                id="name"
+                type="text"
+                name="name"
+                placeholder=" "
+                required
+                aria-required="true"
+              />
+              <label for="name">Your Name</label>
+              <div class="error-message" aria-live="polite"></div>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+              <input
+                id="email"
+                type="email"
+                name="email"
+                placeholder=" "
+                required
+                aria-required="true"
+              />
+              <label for="email">Email Address</label>
+              <div class="error-message" aria-live="polite"></div>
+            </div>
+
+            <!-- Message -->
+            <div class="form-group">
+              <textarea
+                id="message"
+                name="message"
+                placeholder=" "
+                rows="5"
+                required
+                aria-required="true"
+              ></textarea>
+              <label for="message">Your Message</label>
+              <div class="error-message" aria-live="polite"></div>
+            </div>
+
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <script src="scripts/contact.js"></script>
+  </body>
+</html>
