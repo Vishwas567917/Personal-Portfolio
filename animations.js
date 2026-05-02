@@ -1,5 +1,13 @@
 document.addEventListener('DOMContentLoaded',()=>{
   const loader=document.getElementById('page-loader');
+  const firstVisit=!localStorage.getItem('portfolio_loader_seen');
+  const hideLoader=()=>loader?.classList.add('hide');
+  if(firstVisit){
+    setTimeout(()=>{hideLoader();localStorage.setItem('portfolio_loader_seen','1');},1500);
+    setTimeout(hideLoader,2200);
+  }else{
+    hideLoader();
+  }
   window.addEventListener('load',()=>setTimeout(()=>loader?.classList.add('hide'),500));
 
 
