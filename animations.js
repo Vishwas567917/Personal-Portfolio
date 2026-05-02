@@ -2,6 +2,18 @@ document.addEventListener('DOMContentLoaded',()=>{
   const loader=document.getElementById('page-loader');
   window.addEventListener('load',()=>setTimeout(()=>loader?.classList.add('hide'),500));
 
+
+  const nav=document.getElementById('main-nav');
+  window.addEventListener('scroll',()=>nav?.classList.toggle('scrolled',window.scrollY>30));
+
+  const menuToggle=document.getElementById('menu-toggle');
+  const navMenu=document.getElementById('nav-menu');
+  menuToggle?.addEventListener('click',()=>{
+    const open=navMenu.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded',String(open));
+  });
+  navMenu?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navMenu.classList.remove('open')));
+
   const cursorDot=document.querySelector('.cursor-dot');
   const cursorOutline=document.querySelector('.cursor-outline');
   let ox=0,oy=0;
@@ -21,6 +33,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   const skillsSection=document.querySelector('#skills');if(skillsSection)skillsObserver.observe(skillsSection);
 
   const themeBtn=document.getElementById('theme-toggle');
+  const applyTheme=(m)=>{document.body.classList.toggle('light',m==='light');themeBtn.innerHTML=m==='light'?'<i class="fa-solid fa-sun"></i>':'<i class="fa-solid fa-moon"></i>';themeBtn.querySelector('i')?.classList.add('rotating');setTimeout(()=>themeBtn.querySelector('i')?.classList.remove('rotating'),420);localStorage.setItem('theme',m)};
   const applyTheme=(m)=>{document.body.classList.toggle('light',m==='light');themeBtn.innerHTML=m==='light'?'<i class="fa-solid fa-sun"></i>':'<i class="fa-solid fa-moon"></i>';localStorage.setItem('theme',m)};
   applyTheme(localStorage.getItem('theme')||'dark');
   themeBtn?.addEventListener('click',()=>applyTheme(document.body.classList.contains('light')?'dark':'light'));
