@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   }else{
     hideLoader();
   }
+  window.addEventListener('load',()=>setTimeout(()=>loader?.classList.add('hide'),500));
 
 
   const nav=document.getElementById('main-nav');
@@ -41,6 +42,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 
   const themeBtn=document.getElementById('theme-toggle');
   const applyTheme=(m)=>{document.body.classList.toggle('light',m==='light');themeBtn.innerHTML=m==='light'?'<i class="fa-solid fa-sun"></i>':'<i class="fa-solid fa-moon"></i>';themeBtn.querySelector('i')?.classList.add('rotating');setTimeout(()=>themeBtn.querySelector('i')?.classList.remove('rotating'),420);localStorage.setItem('theme',m)};
+  const applyTheme=(m)=>{document.body.classList.toggle('light',m==='light');themeBtn.innerHTML=m==='light'?'<i class="fa-solid fa-sun"></i>':'<i class="fa-solid fa-moon"></i>';localStorage.setItem('theme',m)};
   applyTheme(localStorage.getItem('theme')||'dark');
   themeBtn?.addEventListener('click',()=>applyTheme(document.body.classList.contains('light')?'dark':'light'));
 
