@@ -7,6 +7,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+    <title>Parth Shrivastava | Web Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -20,6 +24,10 @@
         <a href="#home" class="brand"><i class="fa-solid fa-code"></i> Parth.dev</a>
         <button id="menu-toggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
         <ul id="nav-menu" class="nav-menu">
+    <nav>
+      <div class="container nav-wrap">
+        <a href="#home" class="brand"><i class="fa-solid fa-code"></i> Parth.dev</a>
+        <ul>
           <li><a class="active" href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#projects">Projects</a></li><li><a href="#skills">Skills</a></li><li><a href="#contact">Contact</a></li>
         </ul>
         <button id="theme-toggle" aria-label="Toggle dark and light mode"><i class="fa-solid fa-moon"></i></button>
@@ -31,6 +39,20 @@
         <p class="eyebrow">Full-Stack Developer in Progress</p>
         <h1>Parth Shrivastava</h1>
         <p class="typing-text" data-text="Crafting cinematic, modern and highly interactive web experiences."></p>
+          <li><a class="active" href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <header id="home" class="home-hero">
+      <div class="container">
+        <p class="eyebrow">Full-Stack Developer in Progress</p>
+        <h1>Parth Shrivastava</h1>
+        <p>I design clean, modern and high-performance web experiences.</p>
         <div class="btn-group">
           <a class="btn" href="#projects"><i class="fa-solid fa-rocket"></i> View Projects</a>
           <a class="btn btn-outline" href="#contact"><i class="fa-regular fa-paper-plane"></i> Contact Me</a>
@@ -68,6 +90,52 @@
       <button type="submit" class="ripple-btn">Send Message</button><p class="success-message" aria-live="polite"></p>
     </form></div></div></section>
 
+    <section id="about" class="about-section">
+      <div class="about-content container">
+        <figure class="about-photo" aria-label="Profile Photo"><img src="Parth.jpg" alt="Portrait of Parth Shrivastava" /></figure>
+        <div class="about-text">
+          <h2>About Me</h2>
+          <p>Hello! I'm Parth Shrivastava, a curious BCA student and aspiring full-stack web developer who loves building practical digital products.</p>
+          <p><i>Where creativity meets clean code.</i></p>
+          <ul class="education-list">
+            <li>BCA (Year 2) — 1 year left to graduate</li>
+            <li>Focus: Web Development and Full-Stack Systems</li>
+            <li>Open to internships and collaborations</li>
+          </ul>
+          <div class="social-icons" aria-label="Social Links">
+            <a href="https://github.com/Vishwas567917" aria-label="GitHub" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/parth-shrivastava-74b8a1311" aria-label="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:parthshrivastava@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://www.instagram.com/" aria-label="Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects-section"><div class="container"><h2>Projects</h2><div class="projects-grid">
+      <article class="project-card"><img src="video-chat.png" alt="Screenshot of Video Chat App" /><h3>Video-chat-v1</h3><p>Real-time multi-user video chat app using WebRTC for seamless room-based communication.</p><div class="project-buttons"><a href="#" target="_blank" rel="noopener">Live Demo</a><a href="https://github.com/Vishwas567917/video-chat-app" target="_blank" rel="noopener">GitHub</a></div></article>
+      <article class="project-card"><img src="Text-emoji.png" alt="Text to emoji app" /><h3>Text to Emojis Converter</h3><p>Encrypts and decrypts text messages with emoji-based transformation and password protection.</p><div class="project-buttons"><a href="#" target="_blank" rel="noopener">Live Demo</a><a href="https://github.com/Vishwas567917/text-emoji?tab=readme-ov-file" target="_blank" rel="noopener">GitHub</a></div></article>
+      <article class="project-card"><img src="Nodejs.png" alt="Node.js app screenshot" /><h3>Node.js Passport Authentication</h3><p>Authentication app with user signup/login, Passport.js strategy integration, and MongoDB support.</p><div class="project-buttons"><a href="#" target="_blank" rel="noopener">Live Demo</a><a href="https://github.com/Vishwas567917/Node.js-Passport" target="_blank" rel="noopener">GitHub</a></div></article>
+    </div></div></section>
+
+    <section id="skills" class="skills-section"><div class="container"><h2>Skills</h2><div class="skills-container">
+      <div class="skill"><div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" /><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" /></div><h4>HTML & CSS</h4><div class="skill-bar-bg"><div class="skill-bar-fill" style="--skill-level: 90%"></div></div></div>
+      <div class="skill"><div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" /></div><h4>JavaScript</h4><div class="skill-bar-bg"><div class="skill-bar-fill" style="--skill-level: 80%"></div></div></div>
+      <div class="skill"><div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" /></div><h4>Python</h4><div class="skill-bar-bg"><div class="skill-bar-fill" style="--skill-level: 75%"></div></div></div>
+      <div class="skill"><div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React.js" /></div><h4>React.js</h4><div class="skill-bar-bg"><div class="skill-bar-fill" style="--skill-level: 78%"></div></div></div>
+      <div class="skill"><div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" /></div><h4>Next.js</h4><div class="skill-bar-bg"><div class="skill-bar-fill" style="--skill-level: 68%"></div></div></div>
+      <div class="skill"><div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js" /></div><h4>Express.js</h4><div class="skill-bar-bg"><div class="skill-bar-fill" style="--skill-level: 72%"></div></div></div>
+      <div class="skill"><div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" /></div><h4>MongoDB</h4><div class="skill-bar-bg"><div class="skill-bar-fill" style="--skill-level: 74%"></div></div></div>
+      <div class="skill"><div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" /></div><h4>MySQL</h4><div class="skill-bar-bg"><div class="skill-bar-fill" style="--skill-level: 70%"></div></div></div>
+      <div class="skill"><div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" /></div><h4>Databases</h4><div class="skill-bar-bg"><div class="skill-bar-fill" style="--skill-level: 70%"></div></div></div>
+    </div></div></section>
+
+    <section id="contact" class="contact-section"><div class="container"><h2>Contact Me</h2><div class="contact-form-wrapper"><form novalidate>
+      <div class="form-group"><input id="name" type="text" name="name" placeholder=" " required /><label for="name">Your Name</label><div class="error-message" aria-live="polite"></div></div>
+      <div class="form-group"><input id="email" type="email" name="email" placeholder=" " required /><label for="email">Email Address</label><div class="error-message" aria-live="polite"></div></div>
+      <div class="form-group"><textarea id="message" name="message" placeholder=" " rows="5" required></textarea><label for="message">Your Message</label><div class="error-message" aria-live="polite"></div></div>
+      <button type="submit">Send Message</button>
+    </form></div></div></section>
     <script src="contact.js"></script>
     <script src="animations.js"></script>
   </body>
