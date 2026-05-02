@@ -3,6 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Parth Shrivastava | Premium Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
     <title>Parth Shrivastava | Web Developer Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,10 +15,25 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div id="page-loader"><div class="loader-ring"></div><p>Loading Experience...</p></div>
+    <div class="cursor-dot"></div><div class="cursor-outline"></div>
+    <div class="particle-bg" aria-hidden="true"></div>
+
     <nav>
       <div class="container nav-wrap">
         <a href="#home" class="brand"><i class="fa-solid fa-code"></i> Parth.dev</a>
         <ul>
+          <li><a class="active" href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#projects">Projects</a></li><li><a href="#skills">Skills</a></li><li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="theme-toggle" aria-label="Toggle dark and light mode"><i class="fa-solid fa-moon"></i></button>
+      </div>
+    </nav>
+
+    <header id="home" class="home-hero parallax">
+      <div class="container reveal zoom-in">
+        <p class="eyebrow">Full-Stack Developer in Progress</p>
+        <h1>Parth Shrivastava</h1>
+        <p class="typing-text" data-text="Crafting cinematic, modern and highly interactive web experiences."></p>
           <li><a class="active" href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
@@ -35,6 +54,36 @@
         </div>
       </div>
     </header>
+
+    <section id="about" class="about-section parallax"><div class="container"><h2 class="reveal">About Journey</h2>
+      <div class="timeline">
+        <article class="timeline-item reveal slide-left"><span>2023</span><h3>Started BCA</h3><p>Began formal journey in computer applications with strong focus on fundamentals.</p></article>
+        <article class="timeline-item reveal slide-right"><span>2024</span><h3>Frontend Growth</h3><p>Built responsive interfaces with HTML, CSS, JavaScript and modern UI practices.</p></article>
+        <article class="timeline-item reveal slide-left"><span>2025</span><h3>Full-Stack Projects</h3><p>Worked on authentication systems, real-time communication and MERN-based apps.</p></article>
+        <article class="timeline-item reveal slide-right"><span>Now</span><h3>Open for Opportunities</h3><p>Actively seeking internships and collaborative projects to build impactful products.</p></article>
+      </div>
+      <div class="about-profile reveal"><figure class="about-photo"><img src="Parth.jpg" alt="Portrait of Parth Shrivastava"/></figure><div class="social-icons"><a href="https://github.com/Vishwas567917" target="_blank"><i class="fa-brands fa-github"></i></a><a href="https://www.linkedin.com/in/parth-shrivastava-74b8a1311" target="_blank"><i class="fa-brands fa-linkedin"></i></a><a href="mailto:parthshrivastava@gmail.com"><i class="fa-solid fa-envelope"></i></a></div></div>
+    </div></section>
+
+    <section id="projects" class="projects-section"><div class="container"><h2 class="reveal">Featured Projects</h2><div class="projects-grid">
+      <article class="project-card reveal zoom-in"><img src="video-chat.png" alt="Video Chat"/><div class="project-overlay"><h3>Video-chat-v1</h3><p>WebRTC multi-user real-time chat platform.</p><a href="https://github.com/Vishwas567917/video-chat-app" target="_blank">View</a></div></article>
+      <article class="project-card reveal zoom-in"><img src="Text-emoji.png" alt="Text to Emoji"/><div class="project-overlay"><h3>Text to Emojis</h3><p>Emoji-based encryption and decryption workflow.</p><a href="https://github.com/Vishwas567917/text-emoji?tab=readme-ov-file" target="_blank">View</a></div></article>
+      <article class="project-card reveal zoom-in"><img src="Nodejs.png" alt="Node auth"/><div class="project-overlay"><h3>Node Passport Auth</h3><p>Secure login/register with Passport and MongoDB.</p><a href="https://github.com/Vishwas567917/Node.js-Passport" target="_blank">View</a></div></article>
+    </div></div></section>
+
+    <section id="skills" class="skills-section"><div class="container"><h2 class="reveal">Skills</h2><div class="skills-container">
+      <div class="skill reveal"><h4>React.js</h4><div class="skill-bar-bg"><div class="skill-bar-fill" data-level="78"></div></div></div>
+      <div class="skill reveal"><h4>Next.js</h4><div class="skill-bar-bg"><div class="skill-bar-fill" data-level="68"></div></div></div>
+      <div class="skill reveal"><h4>Express.js</h4><div class="skill-bar-bg"><div class="skill-bar-fill" data-level="72"></div></div></div>
+      <div class="skill reveal"><h4>MongoDB</h4><div class="skill-bar-bg"><div class="skill-bar-fill" data-level="74"></div></div></div>
+    </div></div></section>
+
+    <section id="contact" class="contact-section"><div class="container"><h2 class="reveal">Contact Me</h2><div class="contact-form-wrapper reveal"><form novalidate>
+      <div class="form-group"><input id="name" type="text" name="name" placeholder=" " required/><label for="name">Your Name</label><div class="error-message"></div></div>
+      <div class="form-group"><input id="email" type="email" name="email" placeholder=" " required/><label for="email">Email Address</label><div class="error-message"></div></div>
+      <div class="form-group"><textarea id="message" name="message" placeholder=" " rows="5" required></textarea><label for="message">Your Message</label><div class="error-message"></div></div>
+      <button type="submit" class="ripple-btn">Send Message</button><p class="success-message" aria-live="polite"></p>
+    </form></div></div></section>
 
     <section id="about" class="about-section">
       <div class="about-content container">
