@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded',()=>{
   }else{
     hideLoader();
   }
-  window.addEventListener('load',()=>setTimeout(()=>loader?.classList.add('hide'),500));
 
 
   const nav=document.getElementById('main-nav');
@@ -21,6 +20,12 @@ document.addEventListener('DOMContentLoaded',()=>{
     menuToggle.setAttribute('aria-expanded',String(open));
   });
   navMenu?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navMenu.classList.remove('open')));
+  document.querySelectorAll('a[href^="#"]').forEach(link=>link.addEventListener('click',e=>{
+    const id=link.getAttribute('href');
+    const target=document.querySelector(id);
+    if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth',block:'start'});}
+  }));
+
 
   const cursorDot=document.querySelector('.cursor-dot');
   const cursorOutline=document.querySelector('.cursor-outline');
@@ -37,12 +42,11 @@ document.addEventListener('DOMContentLoaded',()=>{
   const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');if(e.target.matches('section,header')){const id=e.target.id;navLinks.forEach(l=>l.classList.toggle('active',l.getAttribute('href')===`#${id}`));}})},{threshold:.2});
   document.querySelectorAll('.reveal,section,header').forEach(el=>io.observe(el));
 
-  const skillsObserver=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.querySelectorAll('.skill-bar-fill').forEach(bar=>bar.style.width=(bar.dataset.level||0)+'%')}})},{threshold:.45});
+  const skillsObserver=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.querySelectorAll('.skill-bar-fill').forEach(bar=>bar.style.width=(bar.dataset.level||0)+'%'); entry.target.querySelectorAll('.skill-counter').forEach(counter=>{const t=+counter.dataset.target||0;let c=0;const step=Math.max(1,Math.ceil(t/30));const timer=setInterval(()=>{c=Math.min(t,c+step);counter.textContent=c+'%';if(c>=t)clearInterval(timer);},22);})}})},{threshold:.45});
   const skillsSection=document.querySelector('#skills');if(skillsSection)skillsObserver.observe(skillsSection);
 
   const themeBtn=document.getElementById('theme-toggle');
   const applyTheme=(m)=>{document.body.classList.toggle('light',m==='light');themeBtn.innerHTML=m==='light'?'<i class="fa-solid fa-sun"></i>':'<i class="fa-solid fa-moon"></i>';themeBtn.querySelector('i')?.classList.add('rotating');setTimeout(()=>themeBtn.querySelector('i')?.classList.remove('rotating'),420);localStorage.setItem('theme',m)};
-  const applyTheme=(m)=>{document.body.classList.toggle('light',m==='light');themeBtn.innerHTML=m==='light'?'<i class="fa-solid fa-sun"></i>':'<i class="fa-solid fa-moon"></i>';localStorage.setItem('theme',m)};
   applyTheme(localStorage.getItem('theme')||'dark');
   themeBtn?.addEventListener('click',()=>applyTheme(document.body.classList.contains('light')?'dark':'light'));
 
